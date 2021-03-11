@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import MUIDataTable from "mui-datatables";
 import { generate_columns } from "./utils/columns";
 import { useDispatch, useSelector } from "react-redux";
-import { CircularProgress, makeStyles, Typography } from "@material-ui/core";
+import {
+  Paper,
+  CircularProgress,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 import { getListData } from "redux-axios-jwt";
 
 // https://github.com/gregnb/mui-datatables/blob/master/examples/serverside-pagination/index.js
@@ -128,18 +133,20 @@ export default function DunamicMUITable({
   };
 
   return (
-    <MUIDataTable
-      title={
-        <Typography variant="h6">
-          {title + " "}
-          {isLoading && (
-            <CircularProgress size={24} className={classes.progress} />
-          )}
-        </Typography>
-      }
-      columns={columns}
-      options={options}
-      data={data.results}
-    />
+    <Paper variant="outlined" elevation={3}>
+      <MUIDataTable
+        title={
+          <Typography variant="h6">
+            {title + " "}
+            {isLoading && (
+              <CircularProgress size={24} className={classes.progress} />
+            )}
+          </Typography>
+        }
+        columns={columns}
+        options={options}
+        data={data.results}
+      />
+    </Paper>
   );
 }
