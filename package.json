@@ -4,7 +4,7 @@
   "description": "Extension of MUI Datatables",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,8 @@
     "Dynamic",
     "DJango",
     "DRF",
-    "Generic",
-    "Pagination",
-    "View"
+    "Generic Pagination",
+    "Class View"
   ],
   "author": "Hamza Fayyaz",
   "license": "MIT",
