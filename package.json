@@ -1,14 +1,37 @@
 {
   "name": "dynamic-muidatatable",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Extension of MUI Datatables",
-  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\"",
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hfayyaz101/dynamic-muidatatable.git"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "keywords": [
     "MUI",
@@ -25,19 +48,20 @@
     "url": "https://github.com/hfayyaz101/dynamic-muidatatable/issues"
   },
   "homepage": "https://github.com/hfayyaz101/dynamic-muidatatable#readme",
-  "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "mui-datatables": "^3.7.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-redux": "^7.2.2",
-    "redux-axios-jwt": "0.0.3"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "plugins": [
-    "@babel/plugin-transform-react-jsx"
-  ],
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.12.17"
+    "@babel/cli": "^7.13.10",
+    "@babel/preset-react": "^7.12.13"
   }
 }
