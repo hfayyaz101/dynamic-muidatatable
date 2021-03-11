@@ -1,6 +1,6 @@
 {
   "name": "dynamic-muidatatable",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extension of MUI Datatables",
   "main": "index.js",
   "scripts": {
