@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/hfayyaz101/dynamic-muidatatable#readme",
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.12.17",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "mui-datatables": "^3.7.6",
@@ -33,5 +34,8 @@
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "redux-axios-jwt": "0.0.3"
-  }
+  },
+  "plugins": [
+    "@babel/plugin-transform-react-jsx"
+  ]
 }
